@@ -1,0 +1,12 @@
+apply plugin: 'java'
+apply plugin: 'application'
+apply plugin: 'eclipse'
+
+repositories{
+		mavenCentral()
+		mavenLocal()
+}
+dependencies{
+	implementation group: 'com.google.inject', name: 'guice', version: '5.0.1'
+}
+ 
