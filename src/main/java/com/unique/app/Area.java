@@ -4,34 +4,3 @@ public interface Area{
 	int triangle(int h,int b);
 	int square(int l);
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

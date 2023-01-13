@@ -13,5 +13,4 @@ public class AreaofTriangleImpl implements Area{
 	public int square(int l) {
 		return 0;
 	}
-
 }
