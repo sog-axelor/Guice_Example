@@ -15,7 +15,7 @@ public class guiceListener extends GuiceServletContextListener{
 	    return Guice.createInjector(new ServletModule(){
 	    	@Override
 	    	protected void configureServlets(){
-	    		serve("/").with(test.class);
+	    		serve("/*").with(test.class);
 	    	}
 	    });
 	    
