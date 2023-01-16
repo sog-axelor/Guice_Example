@@ -8,5 +8,6 @@ repositories{
 }
 dependencies{
 	implementation group: 'com.google.inject', name: 'guice', version: '5.0.1'
+	implementation 'javax.servlet:javax.servlet-api:4.0.0'
 }
  
