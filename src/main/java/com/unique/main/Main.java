@@ -1,17 +1,18 @@
-package com.unique.app;
+package com.unique.main;
 
 import com.google.inject.Guice;
 import com.google.inject.Injector;
-import com.unique.cls.totalCount;
+import com.unique.app.salaryApp;
 import com.unique.module.salaryModule;
 
-public class GuiceTester {
+public class Main {
 
 	public static void main(String[] args) {
 
 		Injector ij = Guice.createInjector(new salaryModule());
-		totalCount tc = ij.getInstance(totalCount.class);
-		tc.maketotalCount();
+		salaryApp sa = ij.getInstance(salaryApp.class);
+		sa.doSalary();
+		System.out.println("Salary is here");
 	}
 
 }

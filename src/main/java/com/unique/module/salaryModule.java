@@ -1,22 +1,16 @@
 package com.unique.module;
 
 import com.google.inject.AbstractModule;
-import com.google.inject.Provides;
+import com.google.inject.matcher.Matchers;
 import com.unique.cls.salaryCount;
-import com.unique.impl.grossSalaryImpl;
+import com.unique.cls.salaryTracker;
+import com.unique.impl.salaryImpl;
+import com.unique.interceptor.salaryIntreceptor;
 
 public class salaryModule extends AbstractModule {
-
-	   @Override
-	   protected void configure() {} 
-	   
-	   @Provides
-	   public salaryCount mainSalaryCount()
-	   {
-		   salaryCount sc = new grossSalaryImpl(10000,400,300);
-		   return sc;
-	   }
-	   
-	  
-	
+	@Override
+	   protected void configure() {
+		bind(salaryCount.class).to(salaryImpl.class);
+		bindInterceptor(Matchers.any(),Matchers.annotatedWith(salaryTracker.class),new salaryIntreceptor());
+	}
 }
