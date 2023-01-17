@@ -1,8 +1,5 @@
 package com.unique.main;
 
-import javax.persistence.EntityManager;
-
-
 import com.google.inject.Guice;
 import com.google.inject.Injector;
 import com.google.inject.persist.PersistService;
@@ -18,7 +15,7 @@ public class Main {
 			ps.start();
 			
 			studentService ss = ij.getInstance(studentService.class);
-			ss.Student("Sonu");			
+			ss.Student("test1");			
 			System.out.println("Added Successfully...");
 			
 	}
