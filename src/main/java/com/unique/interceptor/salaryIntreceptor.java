@@ -8,9 +8,12 @@ public class salaryIntreceptor implements MethodInterceptor{
 	@Override
 	public Object invoke(MethodInvocation invocation) throws Throwable {
 
-		System.out.println("Before  " + invocation.getMethod().getName());
+		//System.out.println("Before  " + invocation.getMethod().getName());
+        System.out.println("Before method call");
+
 		Object result = invocation.proceed();
-		System.out.println("After  " + invocation.getMethod().getName());
+        System.out.println("After method call");
+		//System.out.println("After  " + invocation.getMethod().getName());
 		return result;
 	}
 

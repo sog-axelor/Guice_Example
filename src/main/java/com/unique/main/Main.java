@@ -11,8 +11,8 @@ public class Main {
 
 		Injector ij = Guice.createInjector(new salaryModule());
 		salaryApp sa = ij.getInstance(salaryApp.class);
-		sa.doSalary();
 		System.out.println("Salary is here");
+		sa.doSalary();
 	}
 
 }
