@@ -1,6 +1,8 @@
 apply plugin: 'java'
 apply plugin: 'application'
 apply plugin: 'eclipse'
+apply plugin: 'war'
+
 
 repositories{
 		mavenCentral()
@@ -8,5 +10,8 @@ repositories{
 }
 dependencies{
 	implementation group: 'com.google.inject', name: 'guice', version: '5.0.1'
+	implementation group: 'com.google.inject', name: 'guice', version: '5.0.1'
+	implementation 'javax.servlet:javax.servlet-api:4.0.0'
+	implementation group: 'com.google.inject.extensions', name: 'guice-servlet', version: '5.1.0'
 }
  
