@@ -2,17 +2,13 @@ package com.unique.main;
 
 import com.google.inject.Guice;
 import com.google.inject.Injector;
-import com.unique.app.salaryApp;
-import com.unique.module.salaryModule;
+import com.unique.cls.StudentRecord;
+import com.unique.module.LoggingModule;
 
 public class Main {
-
-	public static void main(String[] args) {
-
-		Injector ij = Guice.createInjector(new salaryModule());
-		salaryApp sa = ij.getInstance(salaryApp.class);
-		System.out.println("Salary is here");
-		sa.doSalary();
-	}
-
+    public static void main(String[] args) {
+        Injector injector = Guice.createInjector(new LoggingModule());
+        StudentRecord studentRecord = injector.getInstance(StudentRecord.class);
+        studentRecord.addStudent(new StudentRecord());
+    }
 }
