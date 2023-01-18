@@ -23,7 +23,7 @@ public class Hello extends HttpServlet {
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 	PrintWriter out = resp.getWriter();
 	out.print(hi.sayHello());
-	out.print("\n Hello");
+	out.print("\n servletHello");
 	}
 	
 }
