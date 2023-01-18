@@ -10,9 +10,11 @@ public class Main {
 	public static void main(String[] args) {
 
 		Injector ij = Guice.createInjector(new salaryModule());
-		//salaryApp sa = ij.getInstance(salaryApp.class);
-		//System.out.println("Salary is here");
-		//sa.doSalary();
+		salaryApp sa = ij.getInstance(salaryApp.class);
+		
+		
+		System.out.println("Salary is here");
+		sa.doSalary();
 	}
 
 }
